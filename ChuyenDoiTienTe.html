@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<form>
+    <table border="1" width="800px">
+        <tr>
+            <th align="center">Amount</th>
+            <th align="center">From Currency</th>
+            <th align="center">To Currency</th>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center"><input id="nhapso"></td>
+            <td align="center">
+                <select id="F">
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td align="center">
+                <select id="T">
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td align="center"><button type="button" onclick="convert();">Convert</button></td>
+        </tr>
+        <tr>
+            <td colspan="4"><h1 id="Result">Result :</h1></td>
+        </tr>
+    </table>
+    <script>
+        function convert() {
+            let amount = document.getElementById("nhapso").value;
+            if(document.getElementById("F").value === "VND"){
+                switch (document.getElementById("T").value) {
+                    case "VND" :
+                        document.getElementById("Result").innerHTML = "Result : " + amount + " VND";
+                        break;
+                    case "USD" :
+                        amount = amount / 23000;
+                        document.getElementById("Result").innerHTML = "Result : " + amount + " USD";
+                        break;
+                }
+            }
+            else if(document.getElementById("F").value ==="USD"){
+                switch (document.getElementById("T").value) {
+                    case "VND" :
+                        amount = amount * 23000;
+                        document.getElementById("Result").innerHTML = "Result : " + amount + " VND";
+                        break;
+                    case "USD" :
+                        document.getElementById("Result").innerHTML = "Result : " + amount + " USD";
+                        break;
+                }
+            }
+        }
+    </script>
+</form>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="calculator">
+
+    <div>
+        <table>
+            <tr>
+                <td colspan="4"> <input type="text" name="show" readonly> </td>
+            </tr>
+            <tr>
+                <td><button type="button" value="(" onclick="display(this.value)">(</button></td>
+                <td><button type="button" value=")" onclick="display(this.value)">)</button></td>
+                <td><button type="button" value="%" onclick="display(this.value)">%</button></td>
+                <td><button type="reset">AC</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="7" onclick="display(this.value)">7</button></td>
+                <td><button type="button" value="8" onclick="display(this.value)">8</button></td>
+                <td><button type="button" value="9" onclick="display(this.value)">9</button></td>
+                <td><button type="button" value="/" onclick="display(this.value)">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="4" onclick="display(this.value)">4</button></td>
+                <td><button type="button" value="5" onclick="display(this.value)">5</button></td>
+                <td><button type="button" value="6" onclick="display(this.value)">6</button></td>
+                <td><button type="button" value="*" onclick="display(this.value)">X</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="1" onclick="display(this.value)">1</button></td>
+                <td><button type="button" value="2" onclick="display(this.value)">2</button></td>
+                <td><button type="button" value="3" onclick="display(this.value)">3</button></td>
+                <td><button type="button" value="-" onclick="display(this.value)">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="0" onclick="display(this.value)">0</button></td>
+                <td><button type="button" value="." onclick="display(this.value)">.</button></td>
+                <td><button type="button" onclick= "show.value = eval(show.value)">=</button></td>
+                <td><button type="button" value="+" onclick="display(this.value)">+</button></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<script>
+
+    function display(i) {
+        calculator.show.value = calculator.show.value + i;
+    }
+    function cong() {
+        let n1 = document.getElementById('num1').value;
+        let n2 = document.getElementById('num2').value;
+
+        let result;
+
+        let number1 =parseInt(n1);
+        let number2 =parseInt(n2);
+
+        result = number1 + number2;
+        document.getElementById('result2').innerHTML=" " + result;
+    }
+
+    function tru() {
+        let n1 = document.getElementById('num1').value;
+        let n2 = document.getElementById('num2').value;
+
+        let result;
+
+        let number1 =parseInt(n1);
+        let number2 =parseInt(n2);
+
+        result = number1 - number2;
+        document.getElementById('result2').innerHTML=result;
+    }
+
+    function nhan() {
+        let n1 = document.getElementById('num1').value;
+        let n2 = document.getElementById('num2').value;
+
+        let result;
+
+        let number1 =parseInt(n1);
+        let number2 =parseInt(n2);
+
+        result = number1 * number2;
+        document.getElementById('result2').innerHTML=result;
+    }
+
+
+    function chia() {
+        let n1 = document.getElementById('num1').value;
+        let n2 = document.getElementById('num2').value;
+
+        let result;
+
+        let number1 =parseInt(n1);
+        let number2 =parseInt(n2);
+
+        result = number1 / number2;
+        document.getElementById('result2').innerHTML=result;
+    }
+
+</script>
+
+</body>
+</html>
