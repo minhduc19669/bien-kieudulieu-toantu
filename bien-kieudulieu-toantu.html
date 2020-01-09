@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Điểm Trung Bình</h1>
+<script>
+    let inputVatli;
+    let inputHoahoc;
+    let inputSinhhoc;
+    inputVatli=prompt(" Score Vatli");
+    inputHoahoc=prompt("Score Hoahoc");
+    inputSinhhoc=prompt("Score Sinhhoc");
+    let Vatli=parseInt(inputVatli);
+    let Hoahoc=parseInt(inputHoahoc);
+    let Sinhhoc=parseInt(inputSinhhoc);
+    let Medium=(Vatli+Hoahoc+Sinhhoc)/3;
+    document.write('Score:'+Medium);
+</script>
+<h1>Chuyển đổi nhiệt độ</h1>
+<script>
+    let inputCelcius;
+    inputCelcius=prompt("Độ C");
+    let Celcius=parseInt(inputCelcius);
+    let Fahrenheit=((Celcius*9/5)+32);
+    document.write('Độ F:'+Fahrenheit);
+</script>
+<h1>Diện tích hình tròn</h1>
+<script>
+    var property_valua=Math.PI;
+    let inputBankinh;
+    inputBankinh=prompt("Bankinh");
+    let Bankinh=parseInt(inputBankinh);
+    let AreaCircle=(Math.PI*Bankinh*Bankinh);
+    document.write('Area Circle:'+AreaCircle);
+</script>
+<h1>chu vi hinh tròn</h1>
+<script>
+    var property_valua=Math.PI;
+    let inputbankinh;
+    inputbankinh=prompt("bankinh");
+    let bankinh=parseInt(inputbankinh);
+    let chuvi=(2*Math.PI*bankinh);
+    document.write('chuvi:'+ chuvi);
+</script>
+</body>
+</html>
