@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="all">
+    <h1>Hiển thị số nguyên tố: </h1>
+Từ : <input type="number" id="num1">
+Đến : <input type="number" id="num2">
+    <button onclick="showNumber()">Show</button>
+</div>
+<div class="result">
+    <p>Các số nguyên tố là :</p><span  id="show"></span>
+    <p >Tổng :</p> <span id="result"></span>
+</div>
+<script>
+        function kiem_tra_snt(n) {
+            if (n < 2){
+                return false;
+            } else if (n == 2){
+                return true;
+            } else{
+                for (var i = 2; i < n-1; i++) {
+                    if (n % i == 0){
+                        return  false;
+                    }
+                }
+            }
+            return true;
+        }
+        function showNumber() {
+            let a = document.getElementById('num1').value;
+            let b =document.getElementById('num2').value;
+            document.getElementById('show').innerHTML="";
+            var sum=0;
+            for (let i=a;i<=b;i++){
+                    if (kiem_tra_snt(i)){
+                        document.getElementById('show').innerHTML+=i+"-";
+                        sum+=i;
+                    }
+                }
+            document.getElementById('result').innerHTML= sum;
+        }
+</script>
+</body>
+</html>
